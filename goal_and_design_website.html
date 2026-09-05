@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal & Design | Creative Design Studio</title>
+  <meta name="description" content="Custom Canva designs for small businesses, soccer teams, events, and social media.">
+  <style>
+    :root{
+      --ink:#1d1b1a; --cream:#f7f1e8; --paper:#fffaf3;
+      --accent:#b98968; --soft:#e7d4c4; --muted:#6f6862;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    nav{position:sticky;top:0;z-index:10;background:rgba(247,241,232,.94);backdrop-filter:blur(10px);border-bottom:1px solid #dfd3c7}
+    .nav-inner{max-width:1100px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.08em}
+    .navlinks{display:flex;gap:22px;font-size:14px}
+    .hero{max-width:1100px;margin:auto;padding:85px 22px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--accent);font-weight:bold}
+    h1{font-family:Georgia,serif;font-size:clamp(48px,7vw,82px);line-height:.98;margin:14px 0 24px;font-weight:500}
+    .hero p{font-size:18px;color:var(--muted);max-width:600px}
+    .buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .btn{padding:13px 20px;border-radius:999px;border:1px solid var(--ink);font-weight:bold;font-size:14px}
+    .btn.primary{background:var(--ink);color:white}
+    .hero-card{background:var(--paper);padding:18px;box-shadow:0 20px 50px rgba(48,35,25,.12);transform:rotate(2deg)}
+    .mock{aspect-ratio:4/5;border:1px solid #d9cabb;padding:22px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#fffaf3,#ead9ca)}
+    .mock .big{font-family:Georgia,serif;font-size:48px;line-height:1.05}
+    .mock .mini{font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+    section{padding:75px 22px}
+    .wrap{max-width:1100px;margin:auto}
+    .section-title{font-family:Georgia,serif;font-size:42px;font-weight:500;margin-bottom:12px}
+    .section-sub{color:var(--muted);max-width:650px;margin-bottom:34px}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .service{background:var(--paper);padding:25px;border:1px solid #e2d6ca}
+    .service h3{font-family:Georgia,serif;font-size:23px;margin:12px 0 7px}
+    .service p{font-size:14px;color:var(--muted)}
+    .portfolio{background:#1d1b1a;color:white}
+    .portfolio .section-sub{color:#c9c1ba}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .sample{min-height:260px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+    .sample:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#2b2725,#8b6755)}
+    .sample:nth-child(2):before{background:linear-gradient(135deg,#ead6d4,#a67c78)}
+    .sample:nth-child(3):before{background:linear-gradient(135deg,#2a3036,#6d7780)}
+    .sample:nth-child(4):before{background:linear-gradient(135deg,#efe1cb,#a88861)}
+    .sample:nth-child(5):before{background:linear-gradient(135deg,#dbe4d5,#788d72)}
+    .sample:nth-child(6):before{background:linear-gradient(135deg,#22252d,#9a7a2f)}
+    .sample>*{position:relative;z-index:1}
+    .sample .tag{font-size:11px;text-transform:uppercase;letter-spacing:.16em;opacity:.8}
+    .sample h3{font-family:Georgia,serif;font-size:29px;margin-top:5px}
+    .sample p{font-size:13px;opacity:.9}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price{background:var(--paper);border:1px solid #dfd1c4;padding:30px}
+    .price.featured{border:2px solid var(--accent);transform:translateY(-6px)}
+    .price h3{font-family:Georgia,serif;font-size:26px}
+    .amount{font-size:34px;font-weight:bold;margin:12px 0}
+    .price ul{list-style:none;color:var(--muted);font-size:14px}
+    .price li{margin:8px 0}
+    .price li:before{content:"✓ ";color:var(--accent);font-weight:bold}
+    .cta{background:var(--soft);text-align:center}
+    .cta p{max-width:620px;margin:10px auto 25px;color:#625951}
+    footer{padding:30px 22px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:800px){
+      .hero{grid-template-columns:1fr;padding-top:55px}
+      .services{grid-template-columns:1fr 1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .pricing{grid-template-columns:1fr}
+      .price.featured{transform:none}
+    }
+    @media(max-width:560px){
+      .navlinks{gap:10px;font-size:12px}
+      .services,.grid{grid-template-columns:1fr}
+      h1{font-size:54px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#">GOAL & DESIGN</a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Creative design studio</div>
+      <h1>Make your brand<br><em>stand out.</em></h1>
+      <p>Custom social-media graphics, flyers, invitations, and soccer designs made for small businesses, teams, and events.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#contact">Request a design</a>
+        <a class="btn" href="#work">See examples</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="mock">
+        <div class="mini">Goal & Design</div>
+        <div class="big">Your idea.<br>Your style.<br>Your design.</div>
+        <div class="mini">Business • Soccer • Events</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow">What I make</div>
+      <h2 class="section-title">Designs for your next post.</h2>
+      <p class="section-sub">Simple, clean graphics that help your business, team, or event look more professional online.</p>
+      <div class="services">
+        <div class="service"><div>📱</div><h3>Social Posts</h3><p>Instagram posts, promotions, announcements, and story graphics.</p></div>
+        <div class="service"><div>📄</div><h3>Flyers</h3><p>Digital flyers for specials, events, services, and local promotions.</p></div>
+        <div class="service"><div>⚽</div><h3>Soccer</h3><p>Game-day graphics, player posts, tournament flyers, and team announcements.</p></div>
+        <div class="service"><div>🎉</div><h3>Invitations</h3><p>Birthday, baby shower, graduation, and other event invitations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="portfolio">
+    <div class="wrap">
+      <div class="eyebrow">Portfolio</div>
+      <h2 class="section-title">Sample work.</h2>
+      <p class="section-sub">These are sample concepts showing the types of designs available.</p>
+      <div class="grid">
+        <div class="sample"><div class="tag">Restaurant</div><h3>Weekend Special</h3><p>Promotional social post</p></div>
+        <div class="sample"><div class="tag">Beauty</div><h3>New Client Offer</h3><p>Instagram promotion</p></div>
+        <div class="sample"><div class="tag">Fitness</div><h3>Stronger Every Day</h3><p>Class promotion</p></div>
+        <div class="sample"><div class="tag">Coffee Shop</div><h3>Daily Special</h3><p>Menu graphic</p></div>
+        <div class="sample"><div class="tag">Events</div><h3>You're Invited</h3><p>Birthday invitation</p></div>
+        <div class="sample"><div class="tag">Soccer</div><h3>Game Day</h3><p>Team social graphic</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="eyebrow">Simple pricing</div>
+      <h2 class="section-title">Start small.</h2>
+      <p class="section-sub">Starter prices for building a portfolio. Prices can grow as the service grows.</p>
+      <div class="pricing">
+        <div class="price"><h3>Single</h3><div class="amount">$8</div><ul><li>1 custom graphic</li><li>Social post or flyer</li><li>1 revision</li></ul></div>
+        <div class="price featured"><h3>Starter Pack</h3><div class="amount">$20</div><ul><li>3 custom graphics</li><li>Consistent style</li><li>1 revision each</li></ul></div>
+        <div class="price"><h3>Content Pack</h3><div class="amount">$50</div><ul><li>10 custom graphics</li><li>Consistent branding</li><li>1 revision each</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap">
+      <div class="eyebrow">Let's work together</div>
+      <h2 class="section-title">Have an idea?</h2>
+      <p>Send your business name, what you want designed, your preferred style/colors, and any photos or information you want included.</p>
+      <a class="btn primary" href="mailto:YOUR-EMAIL-HERE@example.com?subject=Design%20Request">Request a design</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Goal & Design · Custom digital design services
+  </footer>
+</body>
+</html>
